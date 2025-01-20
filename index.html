@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Curadoria Graduação Presencial Censupeg</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        body {
+            background-color: #f8f8f8;
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #9E1D21;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 30px 10px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            width: 250px;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .card a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #9E1D21;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card a:hover {
+            background-color: #d01a1e;
+        }
+
+        .card-steps {
+            font-size: 14px;
+            color: #555;
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #9E1D21;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            color: #fff;
+            margin: 0;
+        }
+
+        .form-container {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-container label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .form-container input, .form-container button {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #9E1D21;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #d01a1e;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Curadoria Graduação Presencial Censupeg</h1>
+    </header>
+
+    <section>
+        <div class="card-container">
+            <div class="card">
+                <img src="sagah.png" alt="Escolha Unidades de Ensino e Aprendizagem">
+                <div class="card-title">Unidades de Ensino e Aprendizagem (Material Complementar)</div>
+                <a href="http://catalogo.sagah.com.br/" target="_blank">Acessar</a>
+                <div class="card-steps">Atenção: Você receberá um e-mail com as credenciais para acessar o Escolha Unidades de Ensino e Aprendizagem.</div>
+            </div>
+
+            <div class="card">
+                <img src="avalia.png" alt="Monte sua Prova">
+                <div class="card-title">Prova (Ferramenta de Criação de Provas)</div>
+                <a href="https://avalia.grupoa.com.br" target="_blank">Acessar</a>
+                <div class="card-steps">Atenção: Em seu primeiro acesso a Monte sua Prova, clicar no botão primeiro acesso e inserir os dados solicitados.</div>
+            </div>
+
+            <div class="card">
+                <img src="imersys.png" alt="Objetos Imersivos">
+                <div class="card-title">Objetos Imersivos (Objetos 3D e Vídeos 360)</div>
+                <a href="https://censupeg.grupoa.education/marketplace/" target="_blank">Acessar</a>
+                <div class="card-steps">Atenção: Para acessar os Objetos Imersivos, utilizar o login: professor e senha: prof@123.</div>
+            </div>
+
+            <div class="card">
+                <img src="algetec.png" alt="Laboratórios Virtuais ">
+                <div class="card-title">Laboratórios Virtuais (Material Complementar)</div>
+                <a href="https://censupegead.com.br/ead/login/index.php" target="_blank">Acessar</a>
+                <div class="card-steps">Atenção: Para acessar Laboratórios Virtuais, utilizar o login: 999999 e senha: Censu@2023.</div>
+            </div>
+
+            <div class="card">
+    <img src="ajuda.png" alt="Ajuda">
+    <div class="card-title">Solicitar Inclusão de Material Complementar na Unidade de Ensino e Aprendizagem</div>
+    <button onclick="toggleForm()">Solicite Aqui</button>
+    <div class="form-container" id="formulario-laboratorio" style="display: none;">
+        <form action="mailto:suporte.ti@censupeg.com.br" method="post" enctype="text/plain">
+            <label for="disciplina"> Nome da  sua UEA (Disciplina):</label>
+            <input type="text" id="Nome da Disciplina" name="Nome da disciplina" required>
+
+            <label for="laboratorio">Nome do Laboratório:</label>
+            <input type="text" id="Nome do Laboratório" name="Nome do Laboratorio" required>
+
+            <label for="laboratorio">ID do Laboratório:</label>
+            <input type="text" id="ID do Laboratório" name="ID do Laboratorio" required>
+
+            <label for="laboratorio">Nome da UEA:</label>
+            <input type="text" id="Nome da Unidade de Aprendizagem" name="Nome da UA" required>
+
+            <label for="laboratorio">ID da UEA:</label>
+            <input type="text" id="ID da Unidade de Aprendizagem" name="ID da UA" required>
+
+            <label for="professor">Professor Solicitante:</label>
+            <input type="text" id="Nome do Professor" name="Nome do professor" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div class="card-steps">Clique em "Solicite Aqui" para abrir e enviar sua solicitação.</div>
+</div>
+
+<script>
+    function toggleForm() {
+        const formContainer = document.getElementById('formulario-laboratorio');
+        if (formContainer.style.display === 'none') {
+            formContainer.style.display = 'block';
+        } else {
+            formContainer.style.display = 'none';
+        }
+    }
+</script>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Curadoria Graduação Presencial Censupeg. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
